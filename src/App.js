@@ -14,6 +14,10 @@ function App() {
   //     <ColorBlock color={color} />
   //   )
   // });
+
+  const addColor = (newColor) => {
+    setColors([...colors, newColor])
+  }
   
   return (
     <div className="App">
@@ -22,7 +26,7 @@ function App() {
       ))}
 
       <div>
-        <ColorForm />
+        <ColorForm addColor={addColor} />
       </div>
     </div>
   );
